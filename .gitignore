@@ -1,1 +1,6 @@
 build/
+*.DAE
+*.ilk
+*.pdb
+game/console.log
+*.exe

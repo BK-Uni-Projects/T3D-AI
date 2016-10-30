@@ -21,7 +21,7 @@
 //-----------------------------------------------------------------------------
 
 // Set the name of our application
-$appName = "t3d-ai";
+$appName = "Full";
 
 // The directory it is run from
 $defaultGame = "scripts";
@@ -249,6 +249,12 @@ if ($displayHelp) {
 else {
    onStart();
    echo("Engine initialized...");
+
+   ModuleDatabase.scanModules( "" );
+
+   //You can also explicitly decalre some modules here to be loaded by default if they are part of your game
+   //Ex: ModuleDatabase.LoadExplicit( "AppCore" );
+   ModuleDatabase.LoadGroup( "Game" );
 
    if( !$isDedicated )
    {
